@@ -5,7 +5,7 @@ class App {
   #app;
 
   constructor() {
-    this.#app = document.getElementById('app');
+    this.#app = document.querySelector('#app');
     this.#render();
   }
 
