@@ -1,5 +1,5 @@
 {
-  "integrationFolder": "test",
+  "integrationFolder": "__tests__",
   "testFiles": "*.spec.js",
   "screenshotOnRunFailure": false,
   "video": false,
