@@ -1,3 +1,4 @@
+import TabController from './TabController.js';
 import { BASE } from './constants/markup/markup.js';
 
 class App {
@@ -10,6 +11,7 @@ class App {
 
   #render() {
     this.#app.innerHTML += BASE;
+    new TabController();
   }
 }
 
