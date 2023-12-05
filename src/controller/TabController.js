@@ -1,6 +1,6 @@
 import CrewTabController from './CrewTabController.js';
 import TeamTabController from './TeamTabController.js';
-import { TABS } from '../constants/markup/common.js';
+import View from '../View/View.js';
 
 class TabController {
   #tabs;
@@ -12,7 +12,7 @@ class TabController {
   constructor() {
     this.#initControllers();
     this.#initTabs();
-    this.#renderTabs();
+    View.renderTabs();
     this.#handleTabClick();
   }
 
@@ -26,11 +26,6 @@ class TabController {
       'crew-tab': this.#crewTabController.show,
       'team-tab': this.#teamTabController.show,
     };
-  }
-
-  #renderTabs() {
-    const header = document.querySelector('header');
-    header.innerHTML += TABS;
   }
 
   #handleTabClick() {
