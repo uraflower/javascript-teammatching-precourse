@@ -9,10 +9,10 @@ const TABS = `
   <nav>
     <ul>
       <li>
-        <button id='crew-tab'>크루 관리</button>
+        <button id='crew-tab' class='tab-item'>크루 관리</button>
       </li>
       <li>
-        <button id='team-tab'>팀 매칭 관리</button>
+        <button id='team-tab' class='tab-item'>팀 매칭 관리</button>
       </li>
     </ul>
   </nav>
