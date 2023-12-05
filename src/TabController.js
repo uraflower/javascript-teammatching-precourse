@@ -1,15 +1,14 @@
 import { TABS } from './constants/markup/markup.js';
 
 class TabController {
-  #header;
 
   constructor() {
-    this.#header = document.querySelector('header');
     this.#renderTabs();
   }
 
   #renderTabs() {
-    this.#header.innerHTML += TABS;
+    const header = document.querySelector('header');
+    header.innerHTML += TABS;
   }
 }
 
