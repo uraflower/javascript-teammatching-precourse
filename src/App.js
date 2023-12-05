@@ -1,9 +1,12 @@
-import View from './View/View.js';
+import BaseView from './View/BaseView.js';
 import TabController from './controller/TabController.js';
 
 class App {
+  #view;
+
   constructor() {
-    View.renderBase();
+    this.#view = new BaseView();
+    this.#view.renderBase();
     new TabController();
   }
 }
