@@ -1,38 +1,22 @@
-import CrewTabController from './CrewTabController.js';
-import TeamTabController from './TeamTabController.js';
-import View from '../View/View.js';
+import Tab from '../Model/Tab.js';
+import TabView from '../View/TabView.js';
 
 class TabController {
-  #tabs;
+  #tab;
 
-  #crewTabController;
-
-  #teamTabController;
+  #view;
 
   constructor() {
-    this.#initControllers();
-    this.#initTabs();
-    View.renderTabs();
-    this.#handleTabClick();
+    this.#tab = new Tab();
+    this.#view = new TabView();
+
+    this.#view.renderTabs();
+    this.#view.bindClickTab(this.#handleClickTab);
   }
 
-  #initControllers() {
-    this.#crewTabController = new CrewTabController();
-    this.#teamTabController = new TeamTabController();
-  }
-
-  #initTabs() {
-    this.#tabs = {
-      'crew-tab': this.#crewTabController.show,
-      'team-tab': this.#teamTabController.show,
-    };
-  }
-
-  #handleTabClick() {
-    const tabItems = document.querySelectorAll('.tab-item');
-    tabItems.forEach((tab) => {
-      tab.addEventListener('click', this.#tabs[tab.id]);
-    });
+  #handleClickTab(currentTab) {
+    // tab model control
+    console.log(currentTab);
   }
 }
 

@@ -6,10 +6,6 @@ const View = {
     app.innerHTML += BASE;
   },
 
-  renderTabs() {
-    const header = document.querySelector('header');
-    header.innerHTML += TABS;
-  },
 };
 
 Object.freeze(View);
