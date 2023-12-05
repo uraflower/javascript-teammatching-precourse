@@ -1,5 +1,5 @@
 import TabController from './TabController.js';
-import { BASE } from './constants/markup/markup.js';
+import { BASE } from './constants/markup/common.js';
 
 class App {
   #app;

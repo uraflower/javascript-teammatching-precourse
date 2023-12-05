@@ -1,6 +1,6 @@
 import CrewTabController from './CrewTabController.js';
 import TeamTabController from './TeamTabController.js';
-import { TABS } from './constants/markup/markup.js';
+import { TABS } from './constants/markup/common.js';
 
 class TabController {
   #tabs;
