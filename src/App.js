@@ -1,4 +1,4 @@
-import TabController from './TabController.js';
+import TabController from './controller/TabController.js';
 import { BASE } from './constants/markup/common.js';
 
 class App {
