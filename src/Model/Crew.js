@@ -10,6 +10,14 @@ class Crew {
       backend: ['포비', '제이슨'],
     };
   }
+
+  get currentCourse() {
+    return this.#currentCourse;
+  }
+
+  get crewList() {
+    return this.#courses[this.#currentCourse];
+  }
 }
 
 export default Crew;
