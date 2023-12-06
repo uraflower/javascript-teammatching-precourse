@@ -1,5 +1,6 @@
 import TabView from '../View/TabView.js';
 import CrewTabController from './CrewTabController.js';
+import ID from '../constants/id.js';
 
 class TabController {
   #view;
@@ -12,8 +13,8 @@ class TabController {
     this.#crewTabController = new CrewTabController();
 
     this.#tabs = {
-      'crew-tab': this.#crewTabController,
-      'team-tab': null, // 추후 teamTabController 할당
+      [ID.crewTab]: this.#crewTabController,
+      [ID.teamTab]: null, // 추후 teamTabController 할당
     };
     this.#view = new TabView();
 
